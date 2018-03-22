@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 引入约束 -->  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+       xmlns:p="http://www.springframework.org/schema/p"  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+       xsi:schemaLocation="  
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">  
+    <!-- 将所需要的bean写到这里，被beans包裹着 -->  
+    
+    <!-- 这是通过利用默认的构造器来注册bean的方式  -->
+    <bean id="springIOC" class="com.spring.ioc.SpringIOC"></bean>
+    <!-- alias标签的作用就是为了每一个组件及主程序调用同一个数据源时而互不干扰 -->
+    <alias name="springIOC" alias="springIOC_api"/>
+      
+</beans>

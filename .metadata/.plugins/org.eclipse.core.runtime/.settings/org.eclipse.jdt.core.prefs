@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
+org.eclipse.jdt.core.compiler.compliance=1.7
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.source=1.7
+org.eclipse.jdt.core.userLibrary.spring_ioc=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/commons-logging-1.2.jar"/>\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/hamcrest-core-1.3.jar"/>\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/junit-4.12.jar"/>\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/log4j-1.2.17.jar"/>\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/spring-aop-4.3.8.RELEASE.jar"/>\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/spring-beans-4.3.8.RELEASE.jar"/>\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/spring-context-4.3.8.RELEASE.jar"/>\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/spring-core-4.3.8.RELEASE.jar"/>\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/spring-expression-4.3.8.RELEASE.jar"/>\r\n\t<archive path\="F\:/\u5B66\u4E60/jar/spring ioc/spring-test-4.3.8.RELEASE.jar"/>\r\n</userlibrary>\r\n
