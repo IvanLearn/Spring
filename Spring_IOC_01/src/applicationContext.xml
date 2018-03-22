@@ -9,8 +9,17 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
     <!-- 将所需要的bean写到这里，被beans包裹着 -->  
     
     <!-- 这是通过利用默认的构造器来注册bean的方式  -->
-    <bean id="springIOC" class="com.spring.ioc.SpringIOC"></bean>
+    <bean id="springIOC" init-method="init" class="com.spring.ioc.SpringIOC" lazy-init="default" destroy-method="destory"></bean>
     <!-- alias标签的作用就是为了每一个组件及主程序调用同一个数据源时而互不干扰 -->
-    <alias name="springIOC" alias="springIOC_api"/>
+    <!-- <alias name="springIOC" alias="springIOC_api"/> -->
+    
+    <bean id="staticFactory" class="com.spring.staticFactory.StaticFactory" lazy-init="true"></bean>
+    
+    <!-- 通过调用bean的factory-method静态方法来创建实例 -->
+   <!--  注意ioc容器只负责调用静态方法 -->
+    <!-- <bean id="staticFactory" class="com.spring.staticFactory.StaticFactory" factory-method="getInstance"></bean> -->
+    
+    <!-- <bean id="instanceFactory" class="com.spring.staticFactory.StaticFactory"></bean>
+    <bean id="instanceFactory_springIOC" factory-bean="instanceFactory" factory-method="getInstance1"></bean> -->
       
 </beans>

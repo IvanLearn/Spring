@@ -9,6 +9,8 @@ package com.spring.ioc;
 
 import javax.annotation.Resource;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.spring.staticFactory.StaticFactory;
 
 /**
  * ClassName: SpringIOCTest <br/>
@@ -38,8 +42,21 @@ public class SpringIOCTest {
     @Resource(name = "springIOC")
     private SpringIOC ioc;
     
-    @Resource(name = "springIOC_api")
-    private SpringIOC ioc_api;
+    /*@Resource(name = "springIOC_api")
+    private SpringIOC ioc_api;*/
+    
+    private ApplicationContext context;
+    
+    @Before
+    public void init() {
+//    	context = new ClassPathXmlApplicationContext("applicationContext.xml");
+    }
+    
+    @After
+    public void destroy() {
+//    	ClassPathXmlApplicationContext classContext = (ClassPathXmlApplicationContext)context;
+//    	classContext.close();
+    }
     
     /**
      * 
@@ -47,11 +64,33 @@ public class SpringIOCTest {
      */
     @Test
     public void testContructor() {
-//        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-//        SpringIOC ioc = (SpringIOC) context.getBean("springIOC");
-        
         ioc.say();
-        ioc_api.say();
+//        ioc_api.say();
+    }
+    
+    @Test
+    public void testStaticFactory() {
+    	SpringIOC springIoc = (SpringIOC) context.getBean("staticFactory");
+    	
+    	springIoc.say();
+    }
+    
+    @Test
+    public void testInstanceFactory() {
+    	SpringIOC springIoc = (SpringIOC) context.getBean("instanceFactory_springIOC");
+    	springIoc.say();
+    }
+    
+    @Test
+    public void testLazyInit() {
+    	StaticFactory factory = (StaticFactory) context.getBean("staticFactory");
+    	ioc.say();
+    	factory.say();
+    }
+    
+    @Test
+    public void testLifeCycle() {
+    	ioc.say();
     }
 
 }

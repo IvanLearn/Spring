@@ -27,14 +27,20 @@ public class SpringIOC {
     
     private static final Logger logger = Logger.getLogger(SpringIOC.class);
     
-    private int i;
-
     public SpringIOC() {
-        logger.info("SpringIOC==================");
+    	System.out.println("SpringIOC start==========");
     }
     
     public void say() {
-        System.out.println(this.getClass().getName());
+        System.out.println(this.getClass().getName() + "say==========");
+    }
+    
+    public void init() {
+    	System.out.println(this.getClass().getName() + "init==========");
+    }
+    
+    public void destory() {
+    	System.out.println(this.getClass().getName() + "destory==========");
     }
     
 }
