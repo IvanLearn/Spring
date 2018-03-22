@@ -26,6 +26,8 @@ import org.apache.log4j.Logger;
 public class SpringIOC {
     
     private static final Logger logger = Logger.getLogger(SpringIOC.class);
+    
+    private int i;
 
     public SpringIOC() {
         logger.info("SpringIOC==================");
